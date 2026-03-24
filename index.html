@@ -3,6 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <svg width="60" height="60" viewBox="0 0 512 512" style="display: block; margin: 0 auto 15px auto;">
+        <defs>
+            <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur"></feGaussianBlur>
+                <feMerge>
+                    <feMergeNode in="blur"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+            </filter>
+        </defs>
+        <path d="M48 256h80l48-96 64 192 48-160 32 64h80" stroke="#00d2ff" stroke-width="30" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#neon-glow)"></path>
+        <path d="M380 180l60 0 0 60" stroke="#00d2ff" stroke-width="30" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#neon-glow)"></path>
+    </svg>
     <title>Health Tracker | AK.DEV</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
