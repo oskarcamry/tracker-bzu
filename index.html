@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker | AK.DEV</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-blobs"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Трекер Прогресса</h1>
+            <p id="current-date"></p>
+        </header>
+
+<main class="dashboard">
+    <section class="input-card glass">
+        <h2>Добавить прием пищи</h2>
+        <div class="input-group">
+            <label>Белки (г)</label>
+            <input type="number" id="protein-input" placeholder="+ добавить">
+        </div>
+        <div class="input-group">
+            <label>Углеводы (г)</label>
+            <input type="number" id="carbs-input" placeholder="+ добавить">
+        </div>
+        <button id="add-meal-btn">Добавить в дневник</button>
+
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--glass-border);">
+        
+        <div class="today-stats">
+            <p>Сегодня съедено:</p>
+            <div class="counters">
+                <span>Белки: <b id="today-p">0</b>г</span> | 
+                <span>Углеводы: <b id="today-c">0</b>г</span>
+            </div>
+            <div class="input-group" style="margin-top: 15px;">
+                <label>Текущий вес (кг)</label>
+                <input type="number" id="weight-input" step="0.1" placeholder="80.0">
+            </div>
+            <button id="save-day-btn" class="save-day">Закрыть день и в отчет</button>
+        </div>
+    </section>
+
+    <section class="report-card glass">
+        <h2>Отчет за все время</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Белки</th>
+                        <th>Углев.</th>
+                        <th>Вес</th>
+                    </tr>
+                </thead>
+                <tbody id="report-body"></tbody>
+            </table>
+        </div>
+        <button id="clear-btn" class="secondary-btn">Очистить историю</button>
+    </section>
+</main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
